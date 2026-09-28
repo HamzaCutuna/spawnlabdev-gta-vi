@@ -1,0 +1,18 @@
+.archive-index { min-height: 100svh; display: flex; flex-direction: column; padding: clamp(24px,3vw,48px) clamp(24px,3.7vw,68px) 24px; color: var(--paper); background: #0b1117; }
+.archive-index header { display: flex; justify-content: space-between; gap: 20px; font-size: 10px; font-weight: 700; letter-spacing: .2em; }
+.archive-index header strong { color: var(--accent); }
+.archive-index__intro { display: grid; grid-template-columns: 1fr 1.4fr; gap: 50px; margin: clamp(55px,10vh,120px) 0 clamp(35px,6vh,70px); }
+.archive-index__intro > span { color: var(--accent); font-size: 10px; font-weight: 700; letter-spacing: .2em; }
+.archive-index__intro p { max-width: 570px; margin: 0; font-family: var(--font-display),Impact,sans-serif; font-size: clamp(30px,3.3vw,55px); line-height: 1.04; text-transform: uppercase; }
+.archive-index nav { margin: auto 0; }
+.archive-index ol { margin: 0; padding: 0; list-style: none; border-top: 1px solid rgba(244,240,231,.4); }
+.archive-index li { border-bottom: 1px solid rgba(244,240,231,.4); }
+.archive-index li a { display: grid; grid-template-columns: 50px 1fr minmax(160px,22%) 28px; align-items: center; gap: 25px; padding: clamp(12px,1.5vw,26px) 0; color: var(--paper); text-decoration: none; transition: padding-left 180ms ease,background 180ms ease; }
+.archive-index li a:hover,.archive-index li a:focus-visible { padding-left: 12px; background: rgba(233,164,119,.06); }
+.archive-index li a > span { color: var(--accent); font-size: 10px; font-weight: 700; letter-spacing: .2em; }
+.archive-index li a strong { font-family: var(--font-display),Impact,sans-serif; font-size: clamp(50px,6.6vw,110px); font-weight: 600; line-height: .75; }
+.archive-index li a small { color: #bdc0bf; font-size: 12px; line-height: 1.4; }
+.archive-index li a i { color: var(--accent); font-size: 25px; font-style: normal; }
+.archive-index footer { display: flex; justify-content: space-between; gap: 20px; margin-top: 50px; color: #b5b9b8; font-size: 9px; font-weight: 700; letter-spacing: .1em; }
+@media (max-width: 700px) { .archive-index { padding: 23px 22px 22px; } .archive-index header { font-size: 8px; } .archive-index__intro { display: block; margin: 65px 0 38px; } .archive-index__intro p { margin-top: 20px; font-size: clamp(29px,7.7vw,39px); } .archive-index li a { grid-template-columns: 26px 1fr 20px; gap: 10px; padding: 17px 0; } .archive-index li a strong { font-size: clamp(56px,15vw,72px); } .archive-index li a small { display: none; } .archive-index li a i { font-size: 19px; } .archive-index footer { flex-direction: column; line-height: 1.4; } }
+.archive-index__progress { display: block; margin-top: 24px; color: #e9a477; font-size: 10px; font-weight: 700; letter-spacing: .18em; }

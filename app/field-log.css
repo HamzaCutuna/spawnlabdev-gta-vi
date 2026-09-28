@@ -1,0 +1,63 @@
+.field-log { min-height: 100svh; overflow: hidden; background: #0a0f14; color: #f4f0e7; }
+.field-log a { color: inherit; text-decoration: none; }
+.field-log__header { position: absolute; z-index: 5; top: 0; left: 0; right: 0; display: flex; justify-content: space-between; gap: 20px; padding: 32px clamp(22px,4vw,72px); font-size: 10px; font-weight: 700; letter-spacing: .18em; }
+.field-log__header nav { display: flex; gap: 28px; }
+.field-log__header a:hover { color: #e9a477; }
+.field-log__hero { position: relative; min-height: min(890px,100svh); display: flex; align-items: flex-end; padding: 140px clamp(22px,4vw,72px) 72px; }
+.field-log__hero-photo { position: absolute; inset: 0 0 0 45%; }
+.field-log__hero-photo img { object-fit: cover; object-position: 60% center; }
+.field-log__hero-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg,#0a0f14 2%,rgba(10,15,20,.6) 28%,rgba(10,15,20,.12) 80%),linear-gradient(0deg,#0a0f14,transparent 45%); }
+.field-log__hero-content { position: relative; z-index: 1; max-width: 1000px; }
+.field-log__hero-content > span,.field-log__prompt span,.field-log__section-heading > span,.field-log__trail > span,.field-log__footer { color: #e9a477; font-size: 10px; font-weight: 700; letter-spacing: .2em; }
+.field-log__hero h1 { margin: 24px 0 24px; font-family: var(--font-display),Impact,sans-serif; font-size: clamp(100px,13vw,225px); font-weight: 600; line-height: .73; letter-spacing: -.04em; }
+.field-log__hero h1 em { color: #e9a477; font-style: normal; }
+.field-log__hero p { max-width: 430px; font-size: clamp(16px,1.4vw,20px); line-height: 1.5; }
+.field-log__count { display: flex; align-items: flex-end; gap: 15px; margin-top: 40px; }
+.field-log__count strong { color: #e9a477; font-family: var(--font-display),Impact,sans-serif; font-size: 75px; font-weight: 600; line-height: .8; }
+.field-log__count span { padding-bottom: 4px; font-size: 10px; font-weight: 700; letter-spacing: .2em; }
+.field-log__prompt { display: flex; justify-content: space-between; align-items: center; gap: 30px; margin: 0 clamp(22px,4vw,72px); padding: 38px 0; border-top: 1px solid #596064; border-bottom: 1px solid #596064; }
+.field-log__prompt p { margin: 12px 0 0; font-size: clamp(19px,2vw,30px); }
+.field-log__prompt button,.field-log__footer button { min-height: 44px; border: 0; border-bottom: 1px solid #e9a477; padding: 10px 0; background: transparent; color: #f4f0e7; font: 700 10px var(--font-body),sans-serif; letter-spacing: .16em; cursor: pointer; }
+.field-log__prompt button span { margin-left: 15px; font-size: 20px; }
+.field-log__prompt button:hover,.field-log__footer button:hover { color: #e9a477; }
+.field-log__section { display: grid; grid-template-columns: minmax(210px,35%) 1fr; gap: 7vw; padding: clamp(90px,10vw,170px) clamp(22px,4vw,72px) 0; }
+.field-log__section-heading h2 { margin: 20px 0; font-family: var(--font-display),Impact,sans-serif; font-size: clamp(68px,8vw,125px); font-weight: 600; line-height: .82; }
+.field-log__section-heading small { color: #bbbdbb; font-size: 10px; letter-spacing: .18em; }
+.field-log__section ol { margin: 0; padding: 0; list-style: none; border-top: 1px solid #596064; }
+.field-log__section li { border-bottom: 1px solid #596064; }
+.field-log__section li a { display: grid; grid-template-columns: 38px 1fr auto 20px; align-items: center; gap: 15px; min-height: 91px; }
+.field-log__row-index,.field-log__row-state { color: #b8bbba; font-size: 10px; font-weight: 700; letter-spacing: .13em; }
+.field-log__row-state { color: #e9a477; }
+.field-log__section li strong { font-family: var(--font-display),Impact,sans-serif; font-size: clamp(30px,3vw,48px); font-weight: 600; line-height: .95; text-transform: uppercase; }
+.field-log__section li i { color: #e9a477; font-size: 20px; font-style: normal; }
+.field-log__section li a:hover strong { color: #e9a477; }
+.field-log__trail { margin: 145px clamp(22px,4vw,72px) 0; padding: 34px 0; border-top: 1px solid #596064; }
+.field-log__trail div { display: flex; flex-wrap: wrap; gap: 12px 26px; margin-top: 23px; }
+.field-log__trail a { font-family: var(--font-display),Impact,sans-serif; font-size: 27px; text-transform: uppercase; }
+.field-log__trail a span { margin-left: 6px; color: #e9a477; font-family: var(--font-body),sans-serif; font-size: 13px; }
+.field-log__footer { display: flex; justify-content: space-between; align-items: center; gap: 30px; margin: 75px clamp(22px,4vw,72px) 0; padding: 25px 0 35px; border-top: 1px solid #596064; }
+.field-log__footer > div { display: flex; align-items: center; flex-wrap: wrap; gap: 20px; }
+.field-log--departing { animation: field-log-depart 400ms ease forwards; }
+@keyframes field-log-depart { to { opacity: 0; transform: scale(1.025); } }
+@media (max-width: 700px) {
+  .field-log__header { padding: 23px 22px; font-size: 9px; }
+  .field-log__header nav { gap: 15px; }
+  .field-log__hero { min-height: 85svh; padding: 130px 22px 50px; }
+  .field-log__hero-photo { inset: 0; }
+  .field-log__hero-photo::after { background: linear-gradient(0deg,#0a0f14 0%,rgba(10,15,20,.55) 45%,rgba(10,15,20,.23)),linear-gradient(90deg,rgba(10,15,20,.55),transparent 70%); }
+  .field-log__hero h1 { font-size: clamp(77px,18vw,120px); }
+  .field-log__hero p { max-width: 310px; font-size: 16px; }
+  .field-log__count strong { font-size: 58px; }
+  .field-log__prompt { display: block; }
+  .field-log__prompt button { margin-top: 25px; }
+  .field-log__section { display: block; padding-top: 90px; }
+  .field-log__section ol { margin-top: 35px; }
+  .field-log__section li a { grid-template-columns: 25px 1fr 17px; gap: 10px; min-height: 75px; }
+  .field-log__row-state { grid-column: 2; grid-row: 2; margin-top: -20px; font-size: 8px; }
+  .field-log__section li i { grid-column: 3; grid-row: 1 / 3; }
+  .field-log__section li strong { font-size: clamp(30px,8vw,42px); }
+  .field-log__trail { margin-top: 95px; }
+  .field-log__footer { display: block; line-height: 1.7; }
+  .field-log__footer > button,.field-log__footer > div { margin-top: 20px; }
+}
+@media (prefers-reduced-motion: reduce) { .field-log--departing { animation: none; } }
