@@ -210,7 +210,7 @@ export function WorldNavigator({ visible, onInitialReady, onReturn, initialLocat
       </div>
 
       <div className="world-nav__top" inert={detailIndex !== null}>
-        <Link className="world-nav__identity" href="/index" aria-label="Open SPAWNLABDEV archive index"><span>SPAWNLABDEV / 001 ↗</span><strong>LEONIDA</strong></Link>
+        <Link className="world-nav__identity" href="/archive" aria-label="Open SPAWNLABDEV archive index"><span>SPAWNLABDEV / 001 ↗</span><strong>LEONIDA</strong></Link>
         <div className="world-nav__top-actions"><Link className="world-nav__mode-link" href="/people">PEOPLE <span aria-hidden="true">↗</span></Link><button className="world-nav__return" type="button" onClick={onReturn}>BACK TO INTRO <span aria-hidden="true">↗</span></button></div>
       </div>
 

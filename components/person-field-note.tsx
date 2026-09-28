@@ -30,7 +30,7 @@ export function PersonFieldNote({ person, previous, next, onBack, onPrevious, on
   }, [person.id]);
 
   return <article ref={article} tabIndex={-1} className={`person-note person-note--${person.id}`} aria-label={`${person.name} field note`}>
-    <header className="person-note__header"><Link className="person-note__brand" href="/index">SPAWNLABDEV <i>/</i> FIELD NOTE {person.index} ↗</Link><div><button type="button" onClick={onBack}>BACK TO PEOPLE <span aria-hidden="true">↗</span></button></div></header>
+    <header className="person-note__header"><Link className="person-note__brand" href="/archive">SPAWNLABDEV <i>/</i> FIELD NOTE {person.index} ↗</Link><div><button type="button" onClick={onBack}>BACK TO PEOPLE <span aria-hidden="true">↗</span></button></div></header>
 
     <section className="person-note__opening" style={imageStyle(person.lead)}>
       <Image src={person.lead.src} alt={person.lead.alt} fill sizes="100vw" quality={85} preload />

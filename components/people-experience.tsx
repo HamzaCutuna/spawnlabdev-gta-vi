@@ -142,7 +142,7 @@ export function PeopleExperience({ initialPersonId, openInitialDetail = false }:
       </div>
       <button className="people__image-hit" type="button" onClick={openCurrent} onPointerDown={(event) => { if (event.pointerType === "mouse") dragStart.current = { x: event.clientX, y: event.clientY }; }} onPointerUp={onPointerUp} aria-label={`Open ${active.name} field note`} />
       <header className="people__header">
-        <Link className="people__identity" href="/index" aria-label="Open SPAWNLABDEV archive index"><span>SPAWNLABDEV / 001 ↗</span><strong>PEOPLE</strong></Link>
+        <Link className="people__identity" href="/archive" aria-label="Open SPAWNLABDEV archive index"><span>SPAWNLABDEV / 001 ↗</span><strong>PEOPLE</strong></Link>
         <nav aria-label="Experience"><Link href="/explore"><span className="people__link-context">LEONIDA / </span>PLACES <span className="people__link-arrow" aria-hidden="true">↗</span></Link><button type="button" onClick={() => setDirectoryOpen(true)}>INDEX <span aria-hidden="true">↗</span></button></nav>
       </header>
       <div key={display.id} className={`people__subject people__subject--${display.alignment}`}>
@@ -153,7 +153,7 @@ export function PeopleExperience({ initialPersonId, openInitialDetail = false }:
       </div>
       <div className="people__footer"><span>CHARACTER INDEX <i>/</i> {display.index} OF {String(people.length).padStart(2, "0")}</span><span className="people__gesture">DRAG OR SCROLL TO DISCOVER</span><div className="people__steps"><button type="button" onClick={() => navigate(activeRef.current - 1, -1)} aria-label="Previous person">←</button><span>{display.index} / {String(people.length).padStart(2, "0")}</span><button type="button" onClick={() => navigate(activeRef.current + 1, 1)} aria-label="Next person">→</button></div></div>
     </div>
-    {directoryOpen && <div className="people__directory" role="dialog" aria-modal="true" aria-label="People index"><header><Link href="/index">SPAWNLABDEV / ARCHIVE ↗</Link><button ref={directoryClose} type="button" onClick={() => setDirectoryOpen(false)}>CLOSE <span aria-hidden="true">×</span></button></header><ol>{people.map((person, index) => <li key={person.id}><button type="button" onClick={() => { setDirectoryOpen(false); navigate(index); }}><span>{person.index}</span><strong>{person.name}</strong><span aria-hidden="true">↗</span></button></li>)}</ol></div>}
+    {directoryOpen && <div className="people__directory" role="dialog" aria-modal="true" aria-label="People index"><header><Link href="/archive">SPAWNLABDEV / ARCHIVE ↗</Link><button ref={directoryClose} type="button" onClick={() => setDirectoryOpen(false)}>CLOSE <span aria-hidden="true">×</span></button></header><ol>{people.map((person, index) => <li key={person.id}><button type="button" onClick={() => { setDirectoryOpen(false); navigate(index); }}><span>{person.index}</span><strong>{person.name}</strong><span aria-hidden="true">↗</span></button></li>)}</ol></div>}
     {detailIndex !== null && <PersonFieldNote key={people[detailIndex].id} person={people[detailIndex]} previous={people[wrap(detailIndex - 1)]} next={people[wrap(detailIndex + 1)]} onBack={() => { setDetailIndex(null); if (pathname.startsWith("/people/")) router.push(`/people?person=${people[detailIndex].slug}`); }} onPrevious={() => openAdjacent(detailIndex - 1)} onNext={() => openAdjacent(detailIndex + 1)} />}
   </main>;
 }

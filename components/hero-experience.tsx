@@ -64,11 +64,11 @@ export function HeroExperience() {
 
       <div className="hero__intro-layer" inert={phase !== "intro"}>
         <header className="site-header">
-          <Link className="site-brand" href="/index" aria-label="Open SPAWNLABDEV archive index">
+          <Link className="site-brand" href="/archive" aria-label="Open SPAWNLABDEV archive index">
             <span className="site-brand__mark" aria-hidden="true">S<span>∕</span>L</span>
             <span className="site-brand__text">SPAWNLABDEV<span>EXPERIMENT 001</span></span>
           </Link>
-          <div className="site-header__edition"><span>AN UNOFFICIAL</span><span>WORLD COMPANION</span><Link href="/index">INDEX ↗</Link></div>
+          <div className="site-header__edition"><span>AN UNOFFICIAL</span><span>WORLD COMPANION</span><Link href="/archive">INDEX ↗</Link></div>
         </header>
 
         <div className="hero__body">

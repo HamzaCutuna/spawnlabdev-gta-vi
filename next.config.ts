@@ -5,6 +5,9 @@ const nextConfig: NextConfig = {
   images: {
     qualities: [75, 80, 85],
   },
+  async redirects() {
+    return [{ source: "/index", destination: "/archive", permanent: true }];
+  },
 };
 
 export default nextConfig;

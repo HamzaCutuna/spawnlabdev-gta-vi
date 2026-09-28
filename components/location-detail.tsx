@@ -32,7 +32,7 @@ export function LocationDetail({ location, previousLocation, nextLocation, onBac
   }, [location.id]);
 
   return <article ref={report} className={`location-detail location-detail--${location.reportStyle}`} aria-label={`${location.name} field note`} onScroll={(event) => event.currentTarget.classList.toggle("location-detail--scrolled", event.currentTarget.scrollTop > 80)}>
-    <header className="location-detail__top"><Link className="location-detail__brand" href="/index">SPAWNLABDEV <span>/</span> FIELD NOTE {location.index} ↗</Link><button ref={backButton} type="button" onClick={onBack}>BACK TO LEONIDA <span aria-hidden="true">↗</span></button></header>
+    <header className="location-detail__top"><Link className="location-detail__brand" href="/archive">SPAWNLABDEV <span>/</span> FIELD NOTE {location.index} ↗</Link><button ref={backButton} type="button" onClick={onBack}>BACK TO LEONIDA <span aria-hidden="true">↗</span></button></header>
 
     <section className="location-detail__opening" data-treatment={location.treatment} style={imagePosition(location.primaryImage)}>
       <Image className="location-detail__opening-image" src={location.primaryImage.src} alt={location.primaryImage.alt} fill sizes="100vw" quality={85} preload />
